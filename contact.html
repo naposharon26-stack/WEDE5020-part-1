@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sweet Treats Bakery</title>
-  
+    <title>Contact Us - Sweet Treats Bakery</title>
 </head>
 
-<body>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#fffaf5;">
 
-<header>
+<!-- HEADER -->
+<header style="background-color:#f8c8dc; text-align:center; padding:20px; color:#4b2e2e;">
     <h1>Sweet Treats Bakery</h1>
     <p>Baking your day a little sweeter!</p>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
+<!-- NAVIGATION -->
+<nav style="background-color:#d2691e; text-align:center; padding:12px;">
+    <a href="index.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Home</a>
+    <a href="about.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">About</a>
+    <a href="products.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Products</a>
+    <a href="contact.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contact</a>
 </nav>
 
-<section>
-    <h2>Order / Contact Us</h2>
+<!-- TITLE -->
+<h2 style="text-align:center; color:#4b2e2e; margin-top:20px;">Order / Contact Us</h2>
+
+<!-- FORM BOX -->
+<div style="
+    background-color:white;
+    max-width:500px;
+    margin:20px auto;
+    padding:20px;
+    border:2px solid #d2691e;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+">
 
     <form>
-        <label>Full Name:</label>
-        <input type="text" placeholder="Enter your name" required>
 
-        <label>Email Address:</label>
-        <input type="email" placeholder="Enter your email" required>
+        <label>Full Name:</label><br>
+        <input type="text" placeholder="Enter your name" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <label>Product:</label>
-        <input type="text" placeholder="What would you like to order?" required>
+        <label>Email Address:</label><br>
+        <input type="email" placeholder="Enter your email" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <label>Quantity:</label>
-        <input type="number" placeholder="Enter quantity" required>
+        <label>Product:</label><br>
+        <input type="text" placeholder="What would you like to order?" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <label>Collection Date:</label>
-        <input type="date" required>
+        <label>Quantity:</label><br>
+        <input type="number" placeholder="Enter quantity" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <label>Special Requests:</label>
-        <textarea placeholder="Write your message here..."></textarea>
+        <label>Collection Date:</label><br>
+        <input type="date" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <button type="submit">Place Order</button>
+        <label>Special Requests:</label><br>
+        <textarea placeholder="Write your message here..." style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+        <button type="submit" style="
+            width:100%;
+            background-color:#d2691e;
+            color:white;
+            padding:10px;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        ">
+            Place Order
+        </button>
+
     </form>
 
-    <p style="text-align:center; margin-top:20px;">
-        📞 060 765 8421 | 📧 sweettreats@email.com
-    </p>
+</div>
 
-</section>
+<!-- CONTACT INFO -->
+<p style="text-align:center; margin-top:20px;">
+    📞 060 765 9822 | 📧 sweettreats@gmail.com
+</p>
 
-<footer>
-    <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+<!-- MAP -->
+<h3 style="text-align:center; color:#4b2e2e;">Find Us Here</h3>
+
+<div style="display:flex; justify-content:center; margin:20px;">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.3176!2d28.0473!3d-26.2041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a0a0b0b0b0b0%3A0x0!2sJohannesburg!5e0!3m2!1sen!2sza!4v0000000000000"
+        width="90%"
+        height="300"
+        style="border:0; border-radius:10px;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</div>
+
+<!-- FOOTER -->
+<footer style="
+    background-image:url(images/bread.jpg);
+    background-size:cover;
+    background-position:center;
+    margin-top:20px;
+">
+    <div style="
+        background-color:rgba(0,0,0,0.6);
+        color:white;
+        text-align:center;
+        padding:20px;
+    ">
+        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+        <p>All rights reserved</p>
+    </div>
 </footer>
 
 </body>
