@@ -6,66 +6,126 @@
     <title>Products - Sweet Treats Bakery</title>
 </head>
 
-<body>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#fffaf5;">
 
-<header>
+<!-- HEADER -->
+<header style="background-color:#f8c8dc; text-align:center; padding:20px; color:#4b2e2e;">
     <h1>Sweet Treats Bakery</h1>
     <p>Baking your day a little sweeter!</p>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
+<!-- NAVIGATION -->
+<nav style="background-color:#d2691e; text-align:center; padding:12px;">
+    <a href="index.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Home</a>
+    <a href="about.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">About</a>
+    <a href="products.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Products</a>
+    <a href="contact.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contact</a>
 </nav>
 
-<section>
-    <h2>Our Products</h2>
+<!-- TITLE -->
+<h2 style="text-align:center; color:#4b2e2e; margin-top:20px;">Our Products</h2>
 
-    <div class="products">
+<!-- PRODUCTS CONTAINER -->
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px;">
 
-        <div class="card">
-            <h3>Cakes</h3>
-            <p>Custom cakes for birthdays and events.</p>
-            <img src="images/cakes.jpg" alt="Custom Cakes" width="300" height="200">
-            <p class="price">From R150</p>
-        </div>
-
-        <div class="card">
-            <h3>Cupcakes</h3>
-            <p>Soft and delicious cupcakes in different flavours.</p>
-            <img src="images/Vanilla-Cupcake.jpg" alt="Cupcakes" width="300" height="200">
-            <p class="price">R20 each</p>
-        </div>
-
-        <div class="card">
-            <h3>Cookies</h3>
-            <p>Freshly baked chocolate chip cookies.</p>
-            <img src="images/cookie.jpg" alt="Cookies" width="300" height="200">
-            <p class="price">R10 each</p>
-        </div>
-
-        <div class="card">
-            <h3>Brownies</h3>
-            <p>Rich and fudgy brownies.</p>
-            <img src="images/Fudge-Brownies.jpg" alt="Brownies" width="300" height="200"> 
-            <p class="price">R25 each</p>
-        </div>
-
-        <div class="card">
-            <h3>Muffins</h3>
-            <p>Fresh muffins in various flavours.</p>
-            <img src="images/chocolate-chip-muffins.jpg" alt="Muffins" width="300" height="200">
-            <p class="price">R18 each</p>
-        </div>
-
+    <!-- CARD 1 -->
+    <div style="
+        background-color:white;
+        width:250px;
+        border:2px solid #d2691e;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+        overflow:hidden;
+    ">
+        <img src="images/cakes.jpg" alt="Cake" style="width:100%; height:180px; object-fit:cover;">
+        <h3>Cakes</h3>
+        <p>Custom cakes for birthdays and events.</p>
+        <p style="color:#d2691e; font-weight:bold;">From R150</p>
     </div>
 
-</section>
+    <!-- CARD 2 -->
+    <div style="
+        background-color:white;
+        width:250px;
+        border:2px solid #f8c8dc;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+        overflow:hidden;
+    ">
+        <img src="images/Vanilla-Cupcake.jpg" alt="Cupcakes" style="width:100%; height:180px; object-fit:cover;">
+        <h3>Cupcakes</h3>
+        <p>Soft and delicious cupcakes in different flavours.</p>
+        <p style="color:#d2691e; font-weight:bold;">R20 each</p>
+    </div>
 
-<footer>
-    <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+    <!-- CARD 3 -->
+    <div style="
+        background-color:white;
+        width:250px;
+        border:2px solid #d2691e;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+        overflow:hidden;
+    ">
+        <img src="images/cookie.jpg" alt="Cookies" style="width:100%; height:180px; object-fit:cover;">
+        <h3>Cookies</h3>
+        <p>Freshly baked chocolate chip cookies.</p>
+        <p style="color:#d2691e; font-weight:bold;">R10 each</p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div style="
+        background-color:white;
+        width:250px;
+        border:2px solid #f8c8dc;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+        overflow:hidden;
+    ">
+        <img src="images/Fudge-Brownies.jpg" alt="Brownies" style="width:100%; height:180px; object-fit:cover;">
+        <h3>Brownies</h3>
+        <p>Rich and fudgy brownies.</p>
+        <p style="color:#d2691e; font-weight:bold;">R25 each</p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div style="
+        background-color:white;
+        width:250px;
+        border:2px solid #d2691e;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+        overflow:hidden;
+    ">
+        <img src="images/chocolate-chip-muffins.jpg" alt="Muffins" style="width:100%; height:180px; object-fit:cover;">
+        <h3>Muffins</h3>
+        <p>Fresh muffins in various flavours.</p>
+        <p style="color:#d2691e; font-weight:bold;">R18 each</p>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="
+    background-image:url(images/bread.jpg);
+    background-size:cover;
+    background-position:center;
+    margin-top:20px;
+">
+    <div style="
+        background-color:rgba(0,0,0,0.6);
+        color:white;
+        text-align:center;
+        padding:20px;
+    ">
+        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+        <p>📞 060 765 9822 | 📧 sweettreats@gmail.com</p>
+    </div>
 </footer>
 
 </body>
