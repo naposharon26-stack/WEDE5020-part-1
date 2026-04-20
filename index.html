@@ -4,6 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Treats Bakery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffaf5;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #f8c8dc;
+            text-align: center;
+            padding: 20px;
+            color: #4b2e2e;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #d2691e;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* BANNER */
+        .banner {
+            background-image: url(images/doughnut.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .banner h1 {
+            font-size: 40px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        /* BUTTON */
+        .btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #ff1493;
+        }
+
+        /* SECTION */
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #4b2e2e;
+        }
+
+        /* FOOTER */
+        footer {
+            background-image: url(images/bread.jpg);
+            background-size: cover;
+            background-position: center;
+            margin-top: 20px;
+        }
+
+        footer .footer-content {
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,9 +107,9 @@
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="Products.html">Products</a>
-    <a href="Contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <section class="banner">
@@ -26,7 +118,7 @@
     <a href="products.html" class="btn">View Products</a>
 </section>
 
-<section style="padding:20px; text-align:center;">
+<section class="content">
     <h2>Why Choose Us?</h2>
     <p>✔ Fresh ingredients</p>
     <p>✔ Affordable prices</p>
@@ -34,7 +126,10 @@
 </section>
 
 <footer>
-    <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+    <div class="footer-content">
+        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+        <p>📞 060 765 9822 | 📧 sweettreats@gmail.com</p>
+    </div>
 </footer>
 
 </body>
