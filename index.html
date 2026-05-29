@@ -6,25 +6,35 @@
     <title>Sweet Treats Bakery</title>
 
     <style>
+        /* GLOBAL */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fffaf5;
+            background-color: #faf7ff;
+            color: #3b2f3f;
         }
 
         /* HEADER */
         header {
-            background-color: #f8c8dc;
+            background: linear-gradient(90deg, #f8c8dc, #e6d0ff);
             text-align: center;
-            padding: 20px;
-            color: #4b2e2e;
+            padding: 25px;
         }
 
-        /* NAVBAR */
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-style: italic;
+        }
+
+        /* NAV */
         nav {
-            background-color: #d2691e;
-            padding: 12px;
+            background-color: #6d4c7d;
             text-align: center;
+            padding: 15px;
         }
 
         nav a {
@@ -32,68 +42,121 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #f8c8dc;
         }
 
-        /* BANNER */
-        .banner {
-            background-image: url(images/doughnut.jpg);
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            background-image: url("https://images.unsplash.com/photo-1486427944299-d1955d23e34d");
             background-size: cover;
             background-position: center;
-            color: white;
             text-align: center;
-            padding: 80px 20px;
+            color: white;
+            padding: 120px 20px;
         }
 
-        .banner h1 {
-            font-size: 40px;
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.35);
         }
 
-        .banner p {
-            font-size: 18px;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
         }
 
         /* BUTTON */
         .btn {
-            background-color: #ff69b4;
+            background: linear-gradient(90deg, #c084fc, #f8c8dc);
             color: white;
-            padding: 12px 25px;
+            padding: 14px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             display: inline-block;
             margin-top: 15px;
+            font-size: 16px;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background-color: #ff1493;
+            transform: scale(1.05);
+            opacity: 0.9;
         }
 
-        /* SECTION */
-        .content {
-            padding: 30px;
+        /* INFO */
+        .info {
             text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
         }
 
-        .content h2 {
-            color: #4b2e2e;
+        .info h2 {
+            font-size: 32px;
+        }
+
+        .info p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 5px solid #e6d0ff;
+        }
+
+        .card h3 {
+            color: #6d4c7d;
         }
 
         /* FOOTER */
         footer {
-            background-image: url(images/bread.jpg);
-            background-size: cover;
-            background-position: center;
-            margin-top: 20px;
-        }
-
-        footer .footer-content {
-            background-color: rgba(0,0,0,0.6);
             color: white;
             text-align: center;
-            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
         }
     </style>
 </head>
@@ -101,37 +164,91 @@
 <body>
 
 <header>
-    <h1>Sweet Treats Bakery</h1>
+    <h1>🍰 Sweet Treats Bakery</h1>
     <p>Baking your day a little sweeter!</p>
 </header>
 
-<!-- NAVIGATION -->
-<nav style="background-color:#d2691e; text-align:center; padding:12px;">
-    <a href="index.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Home</a>
-    <a href="about.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">About</a>
-    <a href="products.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Products</a>
-    <a href="contact.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Contact</a>
-    <a href="gallery.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Gallery</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="gallery.html">Gallery</a>
 </nav>
 
-<section class="banner">
-    <h1>Welcome to Sweet Treats Bakery</h1>
-    <p>Freshly baked cakes, cupcakes, cookies and more made with love.</p>
-    <a href="products.html" class="btn">View Products</a>
-</section>
-
-<section class="content">
-    <h2>Why Choose Us?</h2>
-    <p>✔ Fresh ingredients</p>
-    <p>✔ Affordable prices</p>
-    <p>✔ Custom cakes for all occasions</p>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
-        <p>📞 060 765 9822 | 📧 sweettreats@gmail.com</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Sweet Treats Bakery</h1>
+        <p>Freshly baked cakes, cupcakes, cookies & more made with love</p>
+        <a href="products.html" class="btn">View Our Products</a>
     </div>
+</section>
+
+<section class="info">
+    <h2>About Our Bakery</h2>
+    <p>
+        Sweet Treats Bakery is a home-based bakery dedicated to creating delicious,
+        fresh, and beautiful baked goods for every occasion. We believe every bite
+        should feel special.
+    </p>
+</section>
+
+<section class="features">
+
+    <div class="card">
+        <h3>🧁 Fresh Daily Baking</h3>
+        <p>We bake fresh every day using quality ingredients.</p>
+    </div>
+
+    <div class="card">
+        <h3>🎂 Custom Cakes</h3>
+        <p>Personalised cakes for birthdays, weddings and events.</p>
+    </div>
+
+    <div class="card">
+        <h3>💰 Affordable Prices</h3>
+        <p>Delicious treats that fit every budget.</p>
+    </div>
+
+</section>
+
+<!-- FINAL FOOTER (FIXED + CLEAN) -->
+<footer>
+
+    <div style="
+        background-image: url('https://images.unsplash.com/photo-1519869325930-281384150729');
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        position: relative;
+    ">
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(109, 76, 125, 0.45);
+        "></div>
+
+        <h2 style="
+            position: relative;
+            margin: 0;
+            padding-top: 60px;
+            font-size: 28px;
+            color: white;
+        ">
+            Sweet Treats Bakery 🧁
+        </h2>
+    </div>
+
+    <div style="padding: 20px; background: linear-gradient(90deg, #6d4c7d, #c084fc);">
+        <p>📍 Johannesburg, South Africa</p>
+        <p>📞 060 765 9822</p>
+        <p>📧 sweettreats@gmail.com</p>
+        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+    </div>
+
 </footer>
 
 </body>
