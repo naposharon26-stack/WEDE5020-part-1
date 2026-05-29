@@ -1,97 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sweet Treats Bakery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Sweet Treats Bakery</title>
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf7ff;
+    color: #3b2f3f;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #f8c8dc, #e6d0ff);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+/* NAV */
+nav {
+    background-color: #6d4c7d;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f8c8dc;
+}
+
+/* TITLE */
+h2 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 32px;
+}
+
+/* BOXES */
+.box {
+    background-color: white;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 750px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+/* COLORS */
+.about {
+    border-left: 6px solid #d2691e;
+}
+
+.mission {
+    border-left: 6px solid #f8c8dc;
+}
+
+.vision {
+    border-left: 6px solid #c084fc;
+}
+
+h3 {
+    color: #6d4c7d;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+}
+
+.footer-banner {
+    background-image: url('https://images.unsplash.com/photo-1519869325930-281384150729');
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    position: relative;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(109, 76, 125, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-overlay h2 {
+    color: white;
+    margin: 0;
+}
+
+.footer-info {
+    background: linear-gradient(90deg, #6d4c7d, #c084fc);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .box {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+}
+
+</style>
 </head>
 
-<body style="margin:0; font-family: Arial, sans-serif; background-color:#fffaf5;">
+<body>
 
-<!-- HEADER -->
-<header style="background-color:#f8c8dc; text-align:center; padding:20px; color:#4b2e2e;">
-    <h1>Sweet Treats Bakery</h1>
+<header>
+    <h1>🍰 Sweet Treats Bakery</h1>
     <p>Baking your day a little sweeter!</p>
 </header>
 
-<!-- NAVIGATION -->
-<nav style="background-color:#d2691e; text-align:center; padding:12px;">
-    <a href="index.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Home</a>
-    <a href="about.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">About</a>
-    <a href="products.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Products</a>
-    <a href="contact.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Contact</a>
-    <a href="gallery.html" style="color:white; margin:10px; text-decoration:none; font-weight:bold;">Gallery</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="gallery.html">Gallery</a>
 </nav>
 
-<!-- TITLE -->
-<h2 style="text-align:center; color:#4b2e2e; margin-top:20px;">About Us</h2>
+<h2>About Us</h2>
 
-<!-- BOX 1 -->
-<div style="
-    background-color:white;
-    margin:20px auto;
-    padding:20px;
-    max-width:600px;
-    border:2px solid #d2691e;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-">
+<section class="box about">
     <p>
         Sweet Treats Bakery is a small home-based business that specialises in freshly baked goods 
         such as cakes, cupcakes, and cookies. What started as a hobby has grown into a trusted 
         local bakery through word-of-mouth and customer satisfaction.
     </p>
-</div>
+</section>
 
-<!-- BOX 2 -->
-<div style="
-    background-color:white;
-    margin:20px auto;
-    padding:20px;
-    max-width:600px;
-    border:2px solid #f8c8dc;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-">
-    <h2 style="color:#4b2e2e;">Our Mission</h2>
+<section class="box mission">
+    <h3>Our Mission</h3>
     <p>
         To provide affordable, high-quality baked goods that bring joy to every occasion.
     </p>
-</div>
+</section>
 
-<!-- BOX 3 -->
-<div style="
-    background-color:white;
-    margin:20px auto;
-    padding:20px;
-    max-width:600px;
-    border:2px solid #d2691e;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-">
-    <h2 style="color:#4b2e2e;">Our Vision</h2>
+<section class="box vision">
+    <h3>Our Vision</h3>
     <p>
         To become a well-known and trusted bakery in the community, recognised for creativity, 
         quality, and great taste.
     </p>
+</section>
+
+<footer>
+
+<div class="footer-banner">
+    <div class="footer-overlay">
+        <h2>Sweet Treats Bakery 🧁</h2>
+    </div>
 </div>
 
-<!-- FOOTER -->
-<footer style="
-    background-image:url(images/bread.jpg);
-    background-size:cover;
-    background-position:center;
-    margin-top:20px;
-">
-    <div style="
-        background-color:rgba(0,0,0,0.6);
-        color:white;
-        text-align:center;
-        padding:20px;
-    ">
-        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
-        <p>📞 060 765 9822 | 📧 sweettreats@gmail.com</p>
-    </div>
+<div class="footer-info">
+    <p>📍 Johannesburg, South Africa</p>
+    <p>📞 060 765 9822</p>
+    <p>📧 sweettreats@gmail.com</p>
+    <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+</div>
+
 </footer>
 
 </body>
