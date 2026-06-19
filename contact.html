@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Sweet Treats Bakery</title>
+
+<title>Contact Sweet Treats Bakery | Place an Order</title>
+
+<meta name="description"
+content="Contact Sweet Treats Bakery to place cake, cupcake, cookie and bakery orders in Johannesburg.">
+
+<meta name="keywords"
+content="contact bakery, cake orders, cupcake orders, bakery Johannesburg, Sweet Treats Bakery">
 
 <style>
+
 /* GLOBAL */
 body {
     margin: 0;
@@ -75,6 +83,7 @@ textarea {
     margin-bottom: 15px;
     border: 2px solid #e6d0ff;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 button {
@@ -85,6 +94,25 @@ button {
     border: none;
     border-radius: 10px;
     font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* MESSAGE */
+#message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#dateTime {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #6d4c7d;
 }
 
 /* CONTACT INFO */
@@ -93,7 +121,13 @@ button {
     margin-top: 20px;
 }
 
-/* MAP (kept exactly but made responsive) */
+.contact-info a {
+    color: #6d4c7d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MAP */
 .map {
     display: flex;
     justify-content: center;
@@ -105,6 +139,7 @@ iframe {
     max-width: 900px;
     height: 300px;
     border-radius: 14px;
+    border: none;
 }
 
 /* FOOTER */
@@ -142,10 +177,14 @@ footer {
     padding: 20px;
 }
 
-/* RESPONSIVE DESIGN */
+.footer-info a {
+    color: white;
+    text-decoration: none;
+}
 
-/* Tablet */
+/* TABLET */
 @media (max-width: 768px) {
+
     nav a {
         display: block;
         margin: 10px 0;
@@ -161,8 +200,9 @@ footer {
     }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
+
     header h1 {
         font-size: 24px;
     }
@@ -175,6 +215,7 @@ footer {
         height: 250px;
     }
 }
+
 </style>
 </head>
 
@@ -191,46 +232,55 @@ footer {
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
     <a href="gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiry</a>
 </nav>
 
 <h2>Order / Contact Us</h2>
 
 <div class="form-box">
-<form>
+
+<form onsubmit="return submitOrder()">
 
     <label>Full Name</label>
-    <input type="text" required>
+    <input type="text" id="name">
 
     <label>Email Address</label>
-    <input type="email" required>
+    <input type="email" id="email">
 
     <label>Product</label>
-    <input type="text" required>
+    <input type="text" id="product">
 
     <label>Quantity</label>
-    <input type="number" required>
+    <input type="number" id="quantity">
 
     <label>Collection Date</label>
-    <input type="date" required>
+    <input type="date" id="date">
 
     <label>Special Requests</label>
-    <textarea></textarea>
+    <textarea id="requests" rows="4"></textarea>
 
     <button type="submit">Place Order</button>
 
 </form>
+
+<p id="message"></p>
+
 </div>
 
+<div id="dateTime"></div>
+
 <div class="contact-info">
-    <p>📞 060 765 9822 | 📧 sweettreats@gmail.com</p>
+    <p>
+        📞 <a href="tel:+27607659822">060 765 9822</a> |
+        📧 <a href="mailto:sweettreats@gmail.com">sweettreats@gmail.com</a>
+    </p>
 </div>
 
 <h3 style="text-align:center;">Find Us Here</h3>
 
-<!-- MAP KEPT EXACTLY (ONLY MADE RESPONSIVE) -->
 <div class="map">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.3176!2d28.0473!3d-26.2041!2m3!1f0!2f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a0a0b0b0b0b0%3A0x0!2sJohannesburg!5e0!3m2!1sen!2sza!4v0000000000000">
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.3176!2d28.0473!3d-26.2041!2m3!1f0!2f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJohannesburg!5e0!3m2!1sen!2sza!4v0000000000000">
     </iframe>
 </div>
 
@@ -250,6 +300,84 @@ footer {
 </div>
 
 </footer>
+
+<script>
+
+function submitOrder() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let product = document.getElementById("product").value.trim();
+    let quantity = document.getElementById("quantity").value;
+    let date = document.getElementById("date").value;
+
+    let message = document.getElementById("message");
+
+    if(name === "" ||
+       email === "" ||
+       product === "" ||
+       quantity === "" ||
+       date === "") {
+
+        message.style.color = "red";
+        message.innerHTML =
+        "❌ Please complete all required fields.";
+
+        return false;
+    }
+
+    let emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)) {
+
+        message.style.color = "red";
+        message.innerHTML =
+        "❌ Please enter a valid email address.";
+
+        return false;
+    }
+
+    if(quantity <= 0) {
+
+        message.style.color = "red";
+        message.innerHTML =
+        "❌ Quantity must be greater than 0.";
+
+        return false;
+    }
+
+    message.style.color = "#6d4c7d";
+    message.innerHTML =
+    "⏳ Sending your order...";
+
+    setTimeout(function() {
+
+        message.style.color = "green";
+
+        message.innerHTML =
+        "✅ Thank you " + name +
+        "! Your order request has been submitted successfully.";
+
+        document.querySelector("form").reset();
+
+    }, 1500);
+
+    return false;
+}
+
+function updateDateTime() {
+
+    const now = new Date();
+
+    document.getElementById("dateTime").innerHTML =
+    "Current Date & Time: " + now.toLocaleString();
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+</script>
 
 </body>
 </html>
