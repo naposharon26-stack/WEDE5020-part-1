@@ -3,177 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products - Sweet Treats Bakery</title>
+
+<title>Bakery Products | Cakes, Cupcakes, Cookies & More</title>
+
+<meta name="description" content="Browse Sweet Treats Bakery products including cakes, cupcakes, cookies, brownies and muffins made fresh daily.">
+
+<meta name="keywords" content="cakes, cupcakes, cookies, brownies, muffins, bakery products, Sweet Treats Bakery">
 
 <style>
+
 /* GLOBAL */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #faf7ff;
-    color: #3b2f3f;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:#faf7ff;
+    color:#3b2f3f;
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(90deg, #f8c8dc, #e6d0ff);
-    text-align: center;
-    padding: 25px;
+header{
+    background:linear-gradient(90deg,#f8c8dc,#e6d0ff);
+    text-align:center;
+    padding:25px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 38px;
+header h1{
+    margin:0;
+    font-size:38px;
 }
 
-/* NAV */
-nav {
-    background-color: #6d4c7d;
-    text-align: center;
-    padding: 15px;
+/* NAVIGATION */
+nav{
+    background-color:#6d4c7d;
+    text-align:center;
+    padding:15px;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-nav a:hover {
-    color: #f8c8dc;
+nav a:hover{
+    color:#f8c8dc;
 }
 
 /* TITLE */
-h2 {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 32px;
+h2{
+    text-align:center;
+    margin-top:25px;
+    font-size:32px;
 }
 
-/* PRODUCTS GRID */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    max-width: 1100px;
-    margin: auto;
+/* SEARCH */
+.search-container{
+    text-align:center;
+    margin-bottom:20px;
 }
 
-/* PRODUCT CARD */
-.card {
-    background-color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: 0.3s;
-    border-top: 5px solid #e6d0ff;
+.search-container input{
+    width:300px;
+    max-width:90%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-top: 5px solid #f8c8dc;
+/* BUTTON */
+.btn{
+    display:block;
+    margin:20px auto;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#c084fc,#f8c8dc);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.btn:hover{
+    opacity:0.9;
 }
 
-.card h3 {
-    margin: 10px 0 5px;
-    color: #6d4c7d;
+/* MESSAGE BOX */
+#messageBox{
+    text-align:center;
+    font-weight:bold;
+    color:#6d4c7d;
+    margin-bottom:20px;
 }
 
-.card p {
-    margin: 5px 10px;
-    color: #5a3e5e;
-    font-size: 14px;
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.price {
-    font-weight: bold;
-    color: #d2691e;
-    font-size: 18px;
-    margin-bottom: 15px;
+.card{
+    background-color:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:0.3s;
+    border-top:5px solid #e6d0ff;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-top:5px solid #f8c8dc;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#6d4c7d;
+}
+
+.card p{
+    padding:0 10px;
+}
+
+.price{
+    font-weight:bold;
+    color:#d2691e;
+    font-size:18px;
 }
 
 /* FOOTER */
-footer {
-    margin-top: 30px;
+footer{
+    margin-top:30px;
 }
 
-.footer-banner {
-    background-image: url('https://images.unsplash.com/photo-1519869325930-281384150729');
-    background-size: cover;
-    background-position: center;
-    height: 180px;
-    position: relative;
+.footer-banner{
+    background-image:url('https://images.unsplash.com/photo-1519869325930-281384150729');
+    background-size:cover;
+    background-position:center;
+    height:180px;
+    position:relative;
 }
 
-.footer-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(109, 76, 125, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(109,76,125,0.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.footer-overlay h2 {
-    color: white;
-    font-size: 28px;
-    margin: 0;
+.footer-overlay h2{
+    color:white;
 }
 
-.footer-info {
-    background: linear-gradient(90deg, #6d4c7d, #c084fc);
-    color: white;
-    text-align: center;
-    padding: 20px;
+.footer-info{
+    background:linear-gradient(90deg,#6d4c7d,#c084fc);
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-/* RESPONSIVE DESIGN */
+.footer-info a{
+    color:white;
+    text-decoration:none;
+}
 
-/* Tablet */
-@media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
+/* MOBILE */
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
     }
 
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 20px;
+    header h1{
+        font-size:30px;
     }
 
-    header h1 {
-        font-size: 30px;
+    .products{
+        padding:20px;
     }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
+@media(max-width:480px){
+
+    header h1{
+        font-size:24px;
     }
 
-    h2 {
-        font-size: 24px;
+    h2{
+        font-size:24px;
     }
 
-    .card img {
-        height: 160px;
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .products {
-        grid-template-columns: 1fr;
+    .card img{
+        height:160px;
     }
 }
+
 </style>
 </head>
 
@@ -190,42 +232,56 @@ footer {
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
     <a href="gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiry</a>
 </nav>
 
 <h2>Our Products</h2>
 
+<div class="search-container">
+    <input type="text"
+           id="searchInput"
+           placeholder="Search products..."
+           onkeyup="searchProducts()">
+</div>
+
+<button class="btn" onclick="showProducts()">
+    View Product Count
+</button>
+
+<div id="messageBox"></div>
+
 <section class="products">
 
-<div class="card">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\cake.jpg">
+<div class="card product-card">
+    <img src="images/cake.jpg" alt="Custom birthday cake">
     <h3>Cakes</h3>
     <p>Custom cakes for birthdays and events.</p>
     <p class="price">From R150</p>
 </div>
 
-<div class="card">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\Vanilla-Cupcake.jpg">
+<div class="card product-card">
+    <img src="images/Vanilla-Cupcake.jpg" alt="Vanilla cupcakes">
     <h3>Cupcakes</h3>
     <p>Soft and delicious cupcakes in different flavours.</p>
     <p class="price">R20 each</p>
 </div>
 
-<div class="card">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\chocolate-chip-cookies.jpg">
+<div class="card product-card">
+    <img src="images/chocolate-chip-cookies.jpg" alt="Chocolate chip cookies">
     <h3>Cookies</h3>
     <p>Freshly baked chocolate chip cookies.</p>
     <p class="price">R10 each</p>
 </div>
 
-<div class="card">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\brownies.jpg">
+<div class="card product-card">
+    <img src="images/brownies.jpg" alt="Chocolate brownies">
     <h3>Brownies</h3>
     <p>Rich and fudgy brownies made daily.</p>
     <p class="price">R25 each</p>
 </div>
 
-<div class="card">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\muffin.jpg">
+<div class="card product-card">
+    <img src="images/muffin.jpg" alt="Fresh blueberry muffins">
     <h3>Muffins</h3>
     <p>Fresh muffins in various flavours.</p>
     <p class="price">R18 each</p>
@@ -243,12 +299,60 @@ footer {
 
 <div class="footer-info">
     <p>📍 Johannesburg, South Africa</p>
-    <p>📞 060 765 9822</p>
-    <p>📧 sweettreats@gmail.com</p>
+
+    <p>
+        📞 <a href="tel:+27607659822">060 765 9822</a>
+    </p>
+
+    <p>
+        📧 <a href="mailto:sweettreats@gmail.com">sweettreats@gmail.com</a>
+    </p>
+
     <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
 </div>
 
 </footer>
 
+<script>
+
+window.onload = function(){
+
+    document.getElementById("messageBox").innerHTML =
+    "🍰 Welcome to Sweet Treats Bakery Products Page!";
+};
+
+function showProducts(){
+
+    document.getElementById("messageBox").innerHTML =
+    "🧁 We currently have 5 delicious products available!";
+}
+
+function searchProducts(){
+
+    let input =
+    document.getElementById("searchInput")
+    .value.toLowerCase();
+
+    let products =
+    document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+
+        let text =
+        product.textContent.toLowerCase();
+
+        if(text.includes(input)){
+            product.style.display = "block";
+        }
+        else{
+            product.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
 </body>
 </html>
+```
