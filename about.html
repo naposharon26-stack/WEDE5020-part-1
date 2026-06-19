@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Sweet Treats Bakery</title>
+
+<title>About Sweet Treats Bakery | Our Story, Mission & Vision</title>
+
+<meta name="description" content="Learn about Sweet Treats Bakery, our story, mission and vision. We create fresh cakes, cupcakes and cookies for every occasion in Johannesburg.">
+
+<meta name="keywords" content="Sweet Treats Bakery, bakery Johannesburg, cakes, cupcakes, cookies, bakery mission, bakery vision, home bakery">
 
 <style>
 
@@ -27,7 +33,7 @@ header h1 {
     font-size: 38px;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
     background-color: #6d4c7d;
     text-align: center;
@@ -46,14 +52,43 @@ nav a:hover {
     color: #f8c8dc;
 }
 
-/* TITLE */
+/* PAGE TITLE */
 h2 {
     text-align: center;
     margin-top: 25px;
     font-size: 32px;
 }
 
-/* BOXES */
+/* BUTTON */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(90deg, #c084fc, #f8c8dc);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* EXTRA INFO */
+#extraInfo {
+    display: none;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6d4c7d;
+}
+
+/* CONTENT BOXES */
 .box {
     background-color: white;
     margin: 20px auto;
@@ -68,7 +103,6 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* COLORS */
 .about {
     border-left: 6px solid #d2691e;
 }
@@ -119,9 +153,17 @@ footer {
     padding: 20px;
 }
 
-/* RESPONSIVE DESIGN */
+.footer-info a {
+    color: white;
+    text-decoration: none;
+}
 
-/* Tablet */
+#dateTime {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* TABLET */
 @media (max-width: 768px) {
 
     nav a {
@@ -139,7 +181,7 @@ footer {
     }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
 
     header h1 {
@@ -152,6 +194,10 @@ footer {
 
     .box {
         padding: 15px;
+    }
+
+    button {
+        width: 90%;
     }
 }
 
@@ -171,49 +217,116 @@ footer {
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
     <a href="gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiry</a>
 </nav>
 
 <h2>About Us</h2>
 
+<div class="button-container">
+
+    <button onclick="showAboutInfo()">
+        Learn More About Us
+    </button>
+
+    <p id="extraInfo"></p>
+
+</div>
+
 <section class="box about">
+
+    <h3>Our Story</h3>
+
     <p>
-        Sweet Treats Bakery is a small home-based business that specialises in freshly baked goods 
-        such as cakes, cupcakes, and cookies. What started as a hobby has grown into a trusted 
-        local bakery through word-of-mouth and customer satisfaction.
+        Sweet Treats Bakery is a small home-based business that specialises
+        in freshly baked goods such as cakes, cupcakes and cookies.
+        What started as a hobby has grown into a trusted local bakery
+        through customer satisfaction and dedication to quality.
     </p>
+
 </section>
 
 <section class="box mission">
+
     <h3>Our Mission</h3>
+
     <p>
-        To provide affordable, high-quality baked goods that bring joy to every occasion.
+        To provide affordable, high-quality baked goods that bring joy
+        to every occasion.
     </p>
+
 </section>
 
 <section class="box vision">
+
     <h3>Our Vision</h3>
+
     <p>
-        To become a well-known and trusted bakery in the community, recognised for creativity, 
-        quality, and great taste.
+        To become a well-known and trusted bakery in the community,
+        recognised for creativity, quality and great taste.
     </p>
+
 </section>
 
 <footer>
 
 <div class="footer-banner">
+
     <div class="footer-overlay">
         <h2>Sweet Treats Bakery 🧁</h2>
     </div>
+
 </div>
 
 <div class="footer-info">
+
     <p>📍 Johannesburg, South Africa</p>
-    <p>📞 060 765 9822</p>
-    <p>📧 sweettreats@gmail.com</p>
+
+    <p>
+        📞
+        <a href="tel:+27607659822">
+            060 765 9822
+        </a>
+    </p>
+
+    <p>
+        📧
+        <a href="mailto:sweettreats@gmail.com">
+            sweettreats@gmail.com
+        </a>
+    </p>
+
+    <p id="dateTime"></p>
+
     <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+
 </div>
 
 </footer>
+
+<script>
+
+/* Learn More Button */
+function showAboutInfo() {
+
+    document.getElementById("extraInfo").style.display = "block";
+
+    document.getElementById("extraInfo").innerHTML =
+    "🧁 Sweet Treats Bakery was founded with a passion for creating delicious homemade treats and making every occasion special!";
+}
+
+/* Live Date & Time */
+function updateDateTime() {
+
+    const now = new Date();
+
+    document.getElementById("dateTime").innerHTML =
+    "Current Date & Time: " + now.toLocaleString();
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+</script>
 
 </body>
 </html>
