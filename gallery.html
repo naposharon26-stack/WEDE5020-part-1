@@ -1,117 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Sweet Treats Bakery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* GLOBAL */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #faf7ff;
-            color: #3b2f3f;
-        }
+<title>Bakery Gallery | Sweet Treats Bakery Creations</title>
 
-        /* HEADER */
-        header {
-            background: linear-gradient(90deg, #f8c8dc, #e6d0ff);
-            text-align: center;
-            padding: 25px;
-        }
+<meta name="description"
+content="View our gallery of custom cakes, cupcakes, cookies, brownies and muffins made by Sweet Treats Bakery.">
 
-        header h1 {
-            margin: 0;
-            font-size: 38px;
-        }
+<meta name="keywords"
+content="bakery gallery, cakes, cupcakes, cookies, brownies, muffins, Sweet Treats Bakery">
 
-        header p {
-            font-style: italic;
-        }
+<style>
 
-        /* NAV */
-        nav {
-            background-color: #6d4c7d;
-            text-align: center;
-            padding: 15px;
-        }
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf7ff;
+    color: #3b2f3f;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #f8c8dc, #e6d0ff);
+    text-align: center;
+    padding: 25px;
+}
 
-        nav a:hover {
-            color: #f8c8dc;
-        }
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
 
-        /* TITLE */
-        h2 {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 32px;
-        }
+header p {
+    font-style: italic;
+}
 
-        /* RESPONSIVE GALLERY GRID */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            max-width: 1100px;
-            margin: auto;
-        }
+/* NAVIGATION */
+nav {
+    background-color: #6d4c7d;
+    text-align: center;
+    padding: 15px;
+}
 
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 3px solid #e6d0ff;
-            transition: 0.3s;
-        }
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-            border-color: #f8c8dc;
-        }
+nav a:hover {
+    color: #f8c8dc;
+}
 
-        /* FOOTER */
-        footer {
-            color: white;
-            margin-top: 30px;
-        }
+/* TITLE */
+h2 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 32px;
+}
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 900px) {
-            nav a {
-                margin: 10px;
-                font-size: 14px;
-            }
-        }
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 3px solid #e6d0ff;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                padding: 20px;
-            }
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #f8c8dc;
+}
 
-            header h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-banner {
+    background-image: url('https://images.unsplash.com/photo-1519869325930-281384150729');
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    position: relative;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(109, 76, 125, 0.45);
+}
+
+.footer-banner h2 {
+    position: relative;
+    margin: 0;
+    padding-top: 60px;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+}
+
+.footer-info {
+    background: linear-gradient(90deg, #6d4c7d, #c084fc);
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    nav a {
+        margin: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -127,63 +189,75 @@
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
     <a href="gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiry</a>
 </nav>
 
 <h2>Our Work</h2>
 
 <section class="gallery">
 
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\cake.jpg" alt="Cake">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\Vanilla-Cupcake.jpg" alt="Cupcake">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\chocolate-chip-cookies.jpg" alt="Cookies">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\brownies.jpg" alt="Brownies">
-    <img src="c:\Users\Student\OneDrive - ADvTECH Ltd\images\muffin.jpg" alt="Muffins">
+    <img src="images/cake.jpg"
+         alt="Custom birthday cake"
+         onclick="openImage(this.src)">
+
+    <img src="images/Vanilla-Cupcake.jpg"
+         alt="Vanilla cupcakes"
+         onclick="openImage(this.src)">
+
+    <img src="images/chocolate-chip-cookies.jpg"
+         alt="Chocolate chip cookies"
+         onclick="openImage(this.src)">
+
+    <img src="images/brownies.jpg"
+         alt="Chocolate brownies"
+         onclick="openImage(this.src)">
+
+    <img src="images/muffin.jpg"
+         alt="Fresh muffins"
+         onclick="openImage(this.src)">
 
 </section>
 
-<!-- CLEAN RESPONSIVE FOOTER -->
+<!-- LIGHTBOX -->
+
+<div id="lightbox" onclick="closeImage()">
+    <img id="lightboxImg" src="" alt="Gallery Image">
+</div>
+
 <footer>
 
-    <div style="
-        background-image: url('https://images.unsplash.com/photo-1519869325930-281384150729');
-        background-size: cover;
-        background-position: center;
-        height: 180px;
-        position: relative;
-    ">
-        <div style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(109, 76, 125, 0.45);
-        "></div>
+<div class="footer-banner">
 
-        <h2 style="
-            position: relative;
-            margin: 0;
-            padding-top: 60px;
-            font-size: 28px;
-            color: white;
-            text-align: center;
-        ">
-            Sweet Treats Bakery 🧁
-        </h2>
-    </div>
+    <div class="footer-overlay"></div>
 
-    <div style="
-        background: linear-gradient(90deg, #6d4c7d, #c084fc);
-        text-align: center;
-        padding: 20px;
-    ">
-        <p>📍 Johannesburg, South Africa</p>
-        <p>📞 060 765 9822</p>
-        <p>📧 sweettreats@gmail.com</p>
-        <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
-    </div>
+    <h2>Sweet Treats Bakery 🧁</h2>
+
+</div>
+
+<div class="footer-info">
+    <p>📍 Johannesburg, South Africa</p>
+    <p>📞 060 765 9822</p>
+    <p>📧 sweettreats@gmail.com</p>
+    <p>© 2026 Sweet Treats Bakery | Napo Mabelane</p>
+</div>
 
 </footer>
+
+<script>
+
+function openImage(imageSrc) {
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    document.getElementById("lightboxImg").src = imageSrc;
+}
+
+function closeImage() {
+
+    document.getElementById("lightbox").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
